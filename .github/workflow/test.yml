@@ -1,0 +1,16 @@
+name: test-action
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use my action from test-branch
+        uses: mbsaharan/my-cli-setup@test-branch
+        with:
+          version: '2.50.0'
+
+      - name: Verify CLI is on PATH
+        run: my-cli --version
