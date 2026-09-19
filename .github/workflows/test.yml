@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Use my action from test-branch
-        uses: mbsaharan/my-cli-setup@test-branch
+        uses: mbsaharan/my-cli-setup@v1
         with:
           version: '2.50.0'
 
